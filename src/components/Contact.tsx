@@ -20,7 +20,12 @@ export function Contact() {
         </h2>
         <p className="contact-body">{contact.body}</p>
         <Magnetic strength={0.4}>
-          <a className="button button-primary button-large" href={`mailto:${identity.email}`}>
+          <a
+            className="button button-primary button-large"
+            href={`https://wa.me/${identity.phone.replace(/[^\d]/g, '')}?text=${encodeURIComponent('Hi Tushar, I came across your portfolio and would like to discuss a project opportunity.')}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             {contact.cta}
           </a>
         </Magnetic>
