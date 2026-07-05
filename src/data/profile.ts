@@ -28,7 +28,7 @@ export const identity = {
 export const formationWords = ['TUSHAR', 'BUILDS', 'SCALES', 'SHIPS']
 
 export const portrait = {
-  src: '/profile_image.png',
+  src: '/green_image.png',
   fallback: '/portrait-placeholder.svg',
   alt: 'Portrait of Abdullah Al Masud Tushar, assembled from emerald mosaic tiles',
 }
