@@ -13,7 +13,7 @@ chaos goes in, systems come out.
 **Stack:** Vite · React 19 · TypeScript · GSAP (ScrollTrigger). The hero
 swarm and mosaic portrait are hand-rolled canvas 2D.
 
-**Identity:** colors and English typography follow luminaryacademybd.com —
+**Identity:** colors and English typography —
 cream `#F1EFE8`, ink `#2C2C2A`, emerald `#00AE8D`, deep greens
 `#008A71 / #006655 / #0A4F3A`, tints `#A8DDD4 / #E6F7F4`, line `#CFCECA`.
 Type: Poppins (display/UI) + Lato (body), via Google Fonts.
