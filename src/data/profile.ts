@@ -2,6 +2,7 @@
  * All portfolio content lives in this file.
  * Edit names, links, copy, and lists here — no component changes needed.
  * Every claim below is sourced from the resume; keep it that way.
+ * Last updated: 2026-07-05
  */
 
 export const identity = {
