@@ -1,5 +1,5 @@
 import { useRef, type PointerEvent } from 'react'
-import { clusters, practiceBus } from '../data/profile.ts'
+import { clusters } from '../data/profile.ts'
 import { Reveal } from './Reveal.tsx'
 import { SplitTitle } from './SplitTitle.tsx'
 
@@ -83,15 +83,6 @@ export function Capabilities() {
           </TiltCard>
         ))}
       </ul>
-
-      <Reveal className="bus" delay={100}>
-        <p className="bus-label">{practiceBus.label}</p>
-        <ul className="bus-items" role="list">
-          {practiceBus.items.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </Reveal>
     </section>
   )
 }

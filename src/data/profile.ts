@@ -1,8 +1,9 @@
 /**
  * All portfolio content lives in this file.
  * Edit names, links, copy, and lists here — no component changes needed.
- * Every claim below is sourced from the resume; keep it that way.
- * Last updated: 2026-07-05
+ * Every claim below is sourced from the resume or the LinkedIn profile
+ * (certifications, recommendations, volunteering, honors); keep it that way.
+ * Last updated: 2026-07-08
  */
 
 export const identity = {
@@ -129,16 +130,6 @@ export const clusters: Cluster[] = [
     items: ['React', 'Next.js', 'Tailwind', 'HTML/CSS'],
   },
 ]
-
-export const practiceBus = {
-  label: 'Shared bus — practices that run through every cluster',
-  items: [
-    'Agile delivery',
-    'Professional Scrum Master I',
-    'Mentored 20+ engineers on AWS',
-    'AI-assisted engineering · Claude Code · Copilot · OpenAI',
-  ],
-}
 
 export interface Engagement {
   name: string
@@ -369,6 +360,224 @@ export const principles: Principle[] = [
     name: 'Improve',
     body: 'Every incident, metric, and review feeds the next decision. Systems get better on purpose, not by accident.',
     proof: 'Root-cause analysis across team boundaries, every time.',
+  },
+]
+
+export interface Certification {
+  name: string
+  issuer: string
+  date: string
+  note?: string
+  credentialUrl?: string
+}
+
+/** Licenses & certifications — as listed on LinkedIn. */
+export const certifications: Certification[] = [
+  {
+    name: 'AWS Certified Solutions Architect – Associate',
+    issuer: 'Amazon Web Services',
+    date: 'Feb 2020',
+    note: 'Cloud architecture across 15+ AWS services',
+    credentialUrl: 'https://drive.google.com/file/d/1BF6a6o07-In_7qODG8taOnEuy1NmtZ_h/view',
+  },
+  {
+    name: 'Professional Scrum Master™ I',
+    issuer: 'Scrum.org',
+    date: 'Aug 2021',
+    note: 'Agile delivery, practiced daily on remote teams',
+    credentialUrl: 'https://drive.google.com/file/d/16Q7K_FPO8NJ5Pseg5oRAKcpzCo8DsK9h/view',
+  },
+  {
+    name: 'Intermediate Secure Coding in Python',
+    issuer: 'SecureFlag',
+    date: 'Feb 2026',
+    note: 'Hands-on secure-coding labs in Python',
+    credentialUrl: 'https://www.secureflag.com/s?c1316dd5-3e9e-400d-8c74-9b516e44bca7',
+  },
+]
+
+export interface Recommendation {
+  name: string
+  title: string
+  relationship: string
+  date: string
+  image: string
+  text: string
+}
+
+/**
+ * LinkedIn recommendations received — names, titles, relationships, and text
+ * exactly as they appear on linkedin.com/in/rctushar07.
+ */
+export const recommendations: Recommendation[] = [
+  {
+    name: 'Teodor Tomter Liland',
+    title: 'Fotograf, filmprodusent og designer',
+    relationship: 'Worked with Tushar on the same team',
+    date: 'September 21, 2023',
+    image: '/recommenders/teodor-tomter-liland.jpg',
+    text: "As the UX designer during the development of our recruitment portal, I had the pleasure of collaborating with Tushar. Throughout the project's phases, his systematic approach shone through, establishing him as a steadfast member of our technical ensemble. Tushar's adeptness in backend systems, paired with his diligence in refining our Jira workflow, was instrumental in ensuring our project's orderly progression. Although the crux of our collaboration was on design and development, Tushar's proactive endeavor to grasp the nuances of UX played a pivotal role in bridging the gap between design blueprints and their practical execution. Beyond his evident technical proficiency, our work environment was uplifted by Tushar's collaborative spirit, we shared a lot of good laughs! Reflecting on our partnership, I can confidently endorse Tushar for development roles, recognizing his potential to integrate seamlessly into and enrich any team.",
+  },
+  {
+    name: 'Einar Eriksen',
+    title: 'Data Scientist / Developer',
+    relationship: 'Managed Tushar directly',
+    date: 'September 18, 2023',
+    image: '/recommenders/einar-eriksen.jpg',
+    text: "In our journey of building a sophisticated recruitment portal, Tushar emerged as a linchpin of technical and organizational expertise. Partnering with Sifat in a remote team based in Bangladesh, Tushar contributed significantly over two years to create a portal that empowers both job seekers and employers. While Tushar's notable work on our Jira setup and CI/CD processes reflects his analytical acumen, it is essential to recognize his broader contributions. His role in the development of the portal, enabling users to seamlessly access job postings, integrate with APIs and a SolR based semantic search for tailored recommendations, and engage in an intuitive application process, was instrumental. Furthermore, Tushar's contributions ensured that employers could effortlessly create job postings, utilize application links, and evaluate applicant compatibility through psychometry. Tushar's dedication, technical know-how, and ability to collaborate effectively with international counterparts, including myself and our UX designer, are testament to his professional caliber. I confidently endorse him for any development or system management roles, certain that his proficiency and commitment will shine through.",
+  },
+  {
+    name: 'Shin Lim',
+    title: 'Senior Backend Developer',
+    relationship: 'Worked with Tushar on the same team',
+    date: 'March 31, 2022',
+    image: '/recommenders/shin-lim.jpg',
+    text: 'Tushar was a key contributor to Ferdia through his dedication to the job, setting a good example to his teammates of good coding practices and cooperation. He is a highly capable scrum master and highly skilled Python developer and will make a key contribution wherever he goes. It was a pleasure working with you, Tushar!',
+  },
+  {
+    name: 'Dhruba Mitra',
+    title: 'Software Engineer at Optimizely || Data Engineering || Web Scraping || ICPC West-Asia Continent Finalist 2020',
+    relationship: 'Reported to Tushar directly',
+    date: 'March 30, 2022',
+    image: '/recommenders/dhruba-mitra.jpg',
+    text: 'Abdullah was a great professional to work with. We worked together at Brain Station-23 LTD and he helped me a lot to get started and also to understand internal processes. He knows how to bring the best out of each person and is an outstanding mentor. His work ethics is immaculate and problem solving skill is too good. No matter how hard situations we faced, he never became nervous and that makes him a great programmer.',
+  },
+  {
+    name: 'Md. Touhidul Islam',
+    title: 'Certified Scrum Master (CSM) | CHRG',
+    relationship: 'Worked with Tushar at the same company',
+    date: 'March 27, 2022',
+    image: '/recommenders/md-touhidul-islam.jpg',
+    text: "He's an absolutely amazing mentor, co-worker, and adviser. While working with him, I was highly delighted by his efficient working style and solution strategies for technical and non-technical problems. His expertise on AWS and relentless contribution enhanced skillful cloud engineers throughout the company. People with a hunger for cloud expertise especially on AWS will be lucky to have him on the team.",
+  },
+  {
+    name: 'Erik Ormevik',
+    title: 'IT Project & Product Management',
+    relationship: 'Tushar was Erik’s client',
+    date: 'March 27, 2022',
+    image: '/recommenders/erik-ormevik.jpg',
+    text: "Tushar is a fantastic colleague who aims to achieve more than your everyday developer. He gave his all to the cause and became a mentor to his peers to ensure they obtained the knowledge he acquired throughout his role. His good spirits and high morale are certainly an added bonus to his already great contributions. He is a colleague I'd be honored to work with again!",
+  },
+  {
+    name: 'Nazmus Sakib',
+    title: 'SE @ Brain Station 23',
+    relationship: 'Reported to Tushar directly',
+    date: 'March 23, 2022',
+    image: '/recommenders/nazmus-sakib.jpg',
+    text: "It was a great experience to work with Tushar. He is one of the best mentors I have ever met. We have been working together in TEQ. He is a very co-operative and fun loving person. Also he is a very humble person. I'm looking forward to work with him.",
+  },
+  {
+    name: 'Sifat Hassan',
+    title: 'Experienced Software Engineer | Python, JavaScript, AWS, Micro-service, Professional Scrum Master',
+    relationship: 'Worked with Tushar on the same team',
+    date: 'March 22, 2022',
+    image: '/recommenders/sifat-hassan.jpg',
+    text: 'There is no better colleague than Tushar. He is one of the most dedicated professionals I’ve worked with and is willing to put that extra help whenever you need it. His expertise as a developer is considerable, and it helped our team come up with more efficient solutions on different projects. His contribution is valuable to the side, and I highly recommend Tushar and would love to work with him again.',
+  },
+  {
+    name: 'Farjana Yeasmin',
+    title: 'Software Quality Assurance Engineer',
+    relationship: 'Worked with Tushar on the same team',
+    date: 'March 14, 2022',
+    image: '/recommenders/farjana-yeasmin.jpg',
+    text: "We've joined our hands on a project, and Tushar is one of the best python developer I've met. I highly recommend his expertise to any person looking for a backend engineer. His ability to tackle any problem is remarkable and with a warm smile. Tushar would become an appreciated member of any team.",
+  },
+  {
+    name: 'Abdullah Al Mosharraf',
+    title: 'Senior Software Engineer & iOS Developer',
+    relationship: 'Studied together with Tushar',
+    date: 'October 13, 2017',
+    image: '/recommenders/abdullah-al-mosharraf.jpg',
+    text: 'A passionate guy with high amount of learning interest and ability. Had a very good time in team-ship since last 3 years. We were at the same team (EWU_DeadLock & EWU_Avengers), he was attentive and serious about his responsibility and very much co-operative, communicative. He has great ability for well understanding and bring creative idea on critical moment.',
+  },
+]
+
+export interface VolunteerEntry {
+  organization: string
+  role: string
+  period: string
+  description: string
+}
+
+/** Volunteering — as listed on LinkedIn. */
+export const volunteering: VolunteerEntry[] = [
+  {
+    organization: 'ACM Problem Solver Community',
+    role: 'Lead Trainer',
+    period: 'Jun 2017 — Mar 2018',
+    description:
+      'Ran weekly competitive-programming sessions, building a problem-solving community across universities.',
+  },
+  {
+    organization: 'East West University',
+    role: 'Trainer & Organizer',
+    period: 'Dec 2016',
+    description:
+      'Organized and taught a competitive-programming camp for university students.',
+  },
+  {
+    organization: 'SWAP — Student Welfare Association',
+    role: 'Trainer',
+    period: 'Aug 2017',
+    description: 'Delivered introductory competitive-programming training.',
+  },
+  {
+    organization: 'City University',
+    role: 'Trainer',
+    period: 'Apr 2017',
+    description: 'Led a 3-day competitive-programming workshop.',
+  },
+  {
+    organization: 'Notre Dame University',
+    role: 'Trainer',
+    period: 'Mar 2017',
+    description: 'Led a 5-day introductory programming workshop.',
+  },
+  {
+    organization: 'United International University',
+    role: 'Trainer',
+    period: 'May 2015',
+    description: 'Delivered a 4-day competitive-programming training.',
+  },
+]
+
+export interface Honor {
+  title: string
+  issuer: string
+  date: string
+}
+
+/** Honors & awards — as listed on LinkedIn. */
+export const honors: Honor[] = [
+  {
+    title: '28th in ACM ICPC Regional 2017',
+    issuer: 'University of Asia Pacific',
+    date: 'Nov 2017',
+  },
+  {
+    title: '2nd Runner Up, Inter University Programming Contest',
+    issuer: 'City University',
+    date: 'Feb 2017',
+  },
+  {
+    title: '1st in Intra University Programming Contest',
+    issuer: 'East West University',
+    date: 'Nov 2016',
+  },
+  {
+    title: "26th in NSU Cybernauts'16",
+    issuer: 'North South University',
+    date: 'Oct 2016',
+  },
+  {
+    title: '1st in Programming Battle Summer 2016',
+    issuer: 'East West University',
+    date: 'Jun 2016',
+  },
+  {
+    title: '2nd in CSE Fest Programming Contest',
+    issuer: 'East West University',
+    date: 'Jun 2015',
   },
 ]
 

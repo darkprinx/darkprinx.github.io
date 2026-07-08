@@ -7,7 +7,9 @@ const LINKS = [
   { href: '#capabilities', label: 'Capabilities' },
   { href: '#experience', label: 'Experience' },
   { href: '#work', label: 'Work' },
+  { href: '#voices', label: 'Voices' },
   { href: '#approach', label: 'Approach' },
+  { href: '#community', label: 'Community' },
 ]
 
 function BrandMark() {

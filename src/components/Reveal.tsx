@@ -1,6 +1,6 @@
-import { useEffect, useRef, type ReactNode } from 'react'
+import { useEffect, useRef, type HTMLAttributes, type ReactNode } from 'react'
 
-interface RevealProps {
+interface RevealProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode
   className?: string
   /** Stagger delay in milliseconds. */
@@ -13,7 +13,14 @@ interface RevealProps {
  * content is always in the DOM, and the reduced-motion media query in
  * global.css disables the effect entirely.
  */
-export function Reveal({ children, className = '', delay = 0, as: Tag = 'div' }: RevealProps) {
+export function Reveal({
+  children,
+  className = '',
+  delay = 0,
+  as: Tag = 'div',
+  style,
+  ...rest
+}: RevealProps) {
   const ref = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -37,7 +44,8 @@ export function Reveal({ children, className = '', delay = 0, as: Tag = 'div' }:
     <Element
       ref={ref as never}
       className={`reveal ${className}`.trim()}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+      style={delay ? { transitionDelay: `${delay}ms`, ...style } : style}
+      {...rest}
     >
       {children}
     </Element>
