@@ -34,6 +34,14 @@ export function Contact() {
             {contact.resumeCta}
           </a>
         </div>
+        <a
+          className="contact-calendly-link"
+          href={identity.calendlyUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Or skip the back-and-forth — book a 30-min call directly →
+        </a>
         <ul className="contact-links" role="list">
           <li>
             <span>Email</span>

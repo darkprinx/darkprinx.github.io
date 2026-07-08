@@ -25,6 +25,7 @@ export const identity = {
     'Backend-heavy full-stack engineer with seven-plus years across cloud SaaS platforms, data pipelines, and high-traffic backends, built remotely with European product teams.',
   heroHint: 'Move through the swarm. Click to break it. It always rebuilds.',
   resumeUrl: '/resume.pdf',
+  calendlyUrl: 'https://calendly.com/rctushar/lets-talk',
 }
 
 /** The words the hero swarm assembles itself into, in order. */

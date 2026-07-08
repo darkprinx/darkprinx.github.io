@@ -1670,6 +1670,23 @@ ol[role='list'] {
   gap: 16px;
 }
 
+.contact-calendly-link {
+  margin-top: 28px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--emerald);
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(0, 174, 141, 0.5);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-calendly-link:hover {
+  color: var(--tint2);
+  border-color: var(--tint2);
+}
+
 .contact-links {
   display: flex;
   flex-wrap: wrap;
