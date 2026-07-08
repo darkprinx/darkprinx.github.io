@@ -90,7 +90,7 @@ export const proofQuotes: ProofQuote[] = [
     quote:
       'He is a highly capable scrum master and highly skilled Python developer and will make a key contribution wherever he goes.',
     name: 'Shin Lim',
-    relationship: 'Worked with Tushar on the same team',
+    relationship: 'Tech Lead of Tushar on Ferdia',
   },
   {
     quote: 'There is no better colleague than Tushar.',
