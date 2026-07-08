@@ -24,6 +24,7 @@ export const identity = {
   positioning:
     'Backend-heavy full-stack engineer with seven-plus years across cloud SaaS platforms, data pipelines, and high-traffic backends, built remotely with European product teams.',
   heroHint: 'Move through the swarm. Click to break it. It always rebuilds.',
+  resumeUrl: '/resume.pdf',
 }
 
 /** The words the hero swarm assembles itself into, in order. */
@@ -76,6 +77,32 @@ export const about = {
     { label: 'Education', value: 'BSc CSE, East West University' },
   ],
 }
+
+export interface ProofQuote {
+  quote: string
+  name: string
+  relationship: string
+}
+
+/** Short highlights pulled from the recommendations below, surfaced early. */
+export const proofQuotes: ProofQuote[] = [
+  {
+    quote:
+      'He is a highly capable scrum master and highly skilled Python developer and will make a key contribution wherever he goes.',
+    name: 'Shin Lim',
+    relationship: 'Worked with Tushar on the same team',
+  },
+  {
+    quote: 'There is no better colleague than Tushar.',
+    name: 'Sifat Hassan',
+    relationship: 'Worked with Tushar on the same team',
+  },
+  {
+    quote: 'He is a colleague I would be honored to work with again.',
+    name: 'Erik Ormevik',
+    relationship: 'Tushar was Erik' + "'" + 's client',
+  },
+]
 
 export interface Cluster {
   key: string
@@ -541,7 +568,8 @@ export const honors: Honor[] = [
 
 export const contact = {
   heading: 'Bring me the chaos.',
-  sub: 'I’ll ship you the system.',
-  body: 'Hiring for a senior backend or full-stack role? Building a product that needs platforms, pipelines, or someone who treats your cloud bill like their own? My inbox is the entry point.',
-  cta: 'Write to me',
+  sub: 'I will ship you the solution.',
+  body: 'Hiring for a senior backend engineer or technical lead? Building data pipelines, scaling platforms, or cutting cloud costs? I lead through clarity, ownership, and shipping. After we talk, I will give you a straight read: your problem, my honest fit. Let us see if we are both in.',
+  cta: 'Message me on WhatsApp',
+  resumeCta: 'Download resume',
 }

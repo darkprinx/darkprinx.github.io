@@ -43,7 +43,7 @@ export function Recommendations() {
         </Reveal>
         <SplitTitle
           id="voices-title"
-          text="Ten people I’ve worked with,"
+          text="People I have worked with,"
           accent="in their own words."
         />
         <Reveal>

@@ -1,6 +1,7 @@
 import { Nav } from './components/Nav.tsx'
 import { Hero } from './components/Hero.tsx'
 import { About } from './components/About.tsx'
+import { ProofStrip } from './components/ProofStrip.tsx'
 import { Capabilities } from './components/Capabilities.tsx'
 import { Credentials } from './components/Credentials.tsx'
 import { Experience } from './components/Experience.tsx'
@@ -24,6 +25,7 @@ export default function App() {
       <main id="main">
         <Hero reducedMotion={reducedMotion} />
         <About />
+        <ProofStrip />
         <Capabilities />
         <Credentials />
         <Experience />

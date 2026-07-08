@@ -636,6 +636,31 @@ ol[role='list'] {
   font-size: 1.1rem;
 }
 
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--cream);
+  background: rgba(0, 174, 141, 0.12);
+  border: 1px solid rgba(0, 174, 141, 0.4);
+  border-radius: 999px;
+  padding: 8px 16px 8px 12px;
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--emerald);
+  flex: none;
+  box-shadow: 0 0 0 3px rgba(0, 174, 141, 0.18);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -698,6 +723,7 @@ ol[role='list'] {
 /* Hero intro choreography */
 .intro-a,
 .intro-d,
+.intro-d2,
 .intro-e,
 .intro-f {
   opacity: 0;
@@ -724,6 +750,10 @@ ol[role='list'] {
 
 .intro-d {
   animation-delay: 0.62s;
+}
+
+.intro-d2 {
+  animation-delay: 0.69s;
 }
 
 .intro-e {
@@ -986,6 +1016,65 @@ ol[role='list'] {
   .portrait {
     max-width: 420px;
     margin-inline: auto;
+  }
+}
+
+/* ==============================================================
+   Proof strip — early testimonial highlights
+   ============================================================== */
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: clamp(32px, 4vw, 48px);
+  list-style: none;
+  padding: 0;
+}
+
+.proof-card {
+  border-left: 3px solid var(--emerald);
+  padding-left: 20px;
+}
+
+.proof-quote {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.proof-attr {
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+}
+
+.proof-more {
+  display: inline-block;
+  margin-top: clamp(28px, 4vw, 40px);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--em-deep);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.proof-more:hover {
+  border-color: var(--em-deep);
+}
+
+@media (max-width: 899px) {
+  .proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 659px) {
+  .proof-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1262,7 +1351,7 @@ ol[role='list'] {
   position: relative;
   padding-left: 18px;
   font-size: 0.92rem;
-  color: rgba(241, 239, 232, 0.88);
+  color: var(--cream);
   line-height: 1.65;
 }
 
@@ -1574,6 +1663,13 @@ ol[role='list'] {
   color: var(--cream-a70);
 }
 
+.contact-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -1662,6 +1758,7 @@ ol[role='list'] {
 
   .intro-a,
   .intro-d,
+  .intro-d2,
   .intro-e,
   .intro-f {
     opacity: 1;
