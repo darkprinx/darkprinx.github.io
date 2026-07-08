@@ -1097,51 +1097,6 @@ ol[role='list'] {
   }
 }
 
-/* Shared practices bus */
-.bus {
-  margin-top: 18px;
-  border: 1px solid rgba(168, 221, 212, 0.7);
-  border-radius: 22px;
-  padding: 24px 28px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 14px 28px;
-  background: linear-gradient(95deg, var(--tint), rgba(230, 247, 244, 0.25));
-}
-
-.bus-label {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--em-deep);
-}
-
-.bus-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  font-size: 0.92rem;
-  color: var(--ink-soft);
-}
-
-.bus-items li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.bus-items li::before {
-  content: '';
-  width: 7px;
-  height: 7px;
-  border-radius: 2px;
-  background: var(--emerald);
-  transform: rotate(45deg);
-}
-
 /* ==============================================================
    Experience — the dark chapter
    ============================================================== */

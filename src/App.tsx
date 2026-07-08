@@ -6,7 +6,6 @@ import { Credentials } from './components/Credentials.tsx'
 import { Experience } from './components/Experience.tsx'
 import { Work } from './components/Work.tsx'
 import { Recommendations } from './components/Recommendations.tsx'
-import { Approach } from './components/Approach.tsx'
 import { Community } from './components/Community.tsx'
 import { Contact } from './components/Contact.tsx'
 import { Footer } from './components/Footer.tsx'
@@ -30,7 +29,6 @@ export default function App() {
         <Experience />
         <Work />
         <Recommendations />
-        <Approach />
         <Community />
         <Contact />
       </main>

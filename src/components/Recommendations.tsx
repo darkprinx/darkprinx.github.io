@@ -48,7 +48,7 @@ export function Recommendations() {
         />
         <Reveal>
           <p className="section-lede">
-            Every recommendation on my LinkedIn, unedited — managers, clients,
+            Every recommendation on my LinkedIn, unedited: managers, clients,
             designers, and the engineers I mentored.
           </p>
         </Reveal>

@@ -52,7 +52,7 @@ export function Contact() {
           </li>
         </ul>
         <p className="contact-base">
-          Based in {identity.location} ({identity.timezone}) — years of remote
+          Based in {identity.location} ({identity.timezone}). Years of remote
           delivery with teams across Europe.
         </p>
       </Reveal>

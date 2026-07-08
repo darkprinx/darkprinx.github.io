@@ -49,19 +49,19 @@ export function Capabilities() {
       <Reveal>
         <p className="eyebrow">
           <span className="eyebrow-dot" aria-hidden="true" />
-          Capability system
+          Core Competency
         </p>
       </Reveal>
       <SplitTitle
         id="capabilities-title"
-        text="Not a list of logos —"
-        accent="a connected system."
+        text="Not a list of logos."
+        accent="A connected competency."
       />
       <Reveal>
         <p className="section-lede">
-          Six clusters that feed each other in production: services push data into
-          pipelines, pipelines run on cloud, everything reports back to the
-          reliability layer.
+          Pull one thread and the rest moves. A new feature needs an API. The
+          API needs a database. The database needs someone awake when it falls
+          over at 2 a.m. Six clusters, one nervous system.
         </p>
       </Reveal>
 

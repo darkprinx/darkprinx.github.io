@@ -16,7 +16,7 @@ export function Work() {
       <Reveal>
         <p className="section-lede">
           Production systems from seven years of client platforms and independent
-          R&D — told as engineering problems, not screenshots. Details stay
+          R&D, told as engineering problems, not screenshots. Details stay
           NDA-safe.
         </p>
       </Reveal>

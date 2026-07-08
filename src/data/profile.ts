@@ -1,6 +1,6 @@
 /**
  * All portfolio content lives in this file.
- * Edit names, links, copy, and lists here — no component changes needed.
+ * Edit names, links, copy, and lists here. No component changes needed.
  * Every claim below is sourced from the resume or the LinkedIn profile
  * (certifications, recommendations, volunteering, honors); keep it that way.
  * Last updated: 2026-07-08
@@ -18,24 +18,24 @@ export const identity = {
   github: 'https://github.com/darkprinx',
   headline: {
     plain: 'Chaos goes in.',
-    accent: 'Systems',
+    accent: 'Solutions',
     tail: 'come out.',
   },
   positioning:
-    'Backend-heavy full-stack engineer — seven-plus years of cloud SaaS platforms, data pipelines, and high-traffic backends, built remotely with European product teams.',
-  heroHint: 'Move through the swarm. Click to break it — it always rebuilds.',
+    'Backend-heavy full-stack engineer with seven-plus years across cloud SaaS platforms, data pipelines, and high-traffic backends, built remotely with European product teams.',
+  heroHint: 'Move through the swarm. Click to break it. It always rebuilds.',
 }
 
 /** The words the hero swarm assembles itself into, in order. */
 export const formationWords = ['TUSHAR', 'BUILDS', 'SCALES', 'SHIPS']
 
 export const portrait = {
-  src: '/green_image.png',
-  fallback: '/portrait-placeholder.svg',
+  src: '/profile_image.png',
+  fallback: '/profile_image.png',
   alt: 'Portrait of Abdullah Al Masud Tushar, assembled from emerald mosaic tiles',
 }
 
-/** Hero ticker — every figure is from the resume. */
+/** Hero ticker: every figure is from the resume. */
 export const stats = [
   '7+ years in production',
   '20+ Airflow DAGs orchestrated',
@@ -48,19 +48,18 @@ export const stats = [
 
 export const about = {
   statement: {
-    before: 'For seven years I have been the engineer teams hand the',
-    emphasis: 'load-bearing problems',
-    after:
-      'to — the pipelines, the payment flows, the org hierarchies, the cloud bills.',
+    before: 'Seven years with',
+    emphasis: 'global engineering teams across Europe,',
+    after: 'shipping the distributed systems, pipelines, payment flows, and infrastructure that keep their products running',
   },
   facets: [
     {
       title: 'Backend-heavy, full-stack honest',
-      body: 'I go deep on Python services, data pipelines, and AWS — and far enough across React and Next.js to ship the whole product when it matters.',
+      body: 'Backend is home (Python, Django, FastAPI), but I own the full delivery loop: data pipelines, AWS/GCP infrastructure, and CI/CD, increasingly with AI-driven tools like Claude Code and Copilot built into how I ship.',
     },
     {
       title: 'Remote by design',
-      body: 'Years of remote collaboration with European startups and mid-sized teams, across green energy, recruitment, transportation, and high-traffic consumer products.',
+      body: 'Years remote with Norwegian and European teams: inside a 200+ engineer delivery org, on a $550M energy-market platform, and behind a telco backend serving 5M+ requests a day.',
     },
     {
       title: 'Ownership over tickets',
@@ -68,13 +67,12 @@ export const about = {
     },
   ],
   philosophy:
-    'Make it work, make it observable, make it cheap to change — in that order.',
+    'Make it work, make it observable, make it cheap to change. In that order.',
   spec: [
     { label: 'Base', value: 'Dhaka, Bangladesh · UTC+6' },
     { label: 'Experience', value: '7+ years' },
     { label: 'Current', value: 'Senior Software Engineer, Cefalo' },
     { label: 'Focus', value: 'Backend · Cloud SaaS · Data engineering' },
-    { label: 'Certified', value: 'AWS SA Associate (2020–23) · PSM I' },
     { label: 'Education', value: 'BSc CSE, East West University' },
   ],
 }
@@ -105,7 +103,7 @@ export const clusters: Cluster[] = [
     key: 'cloud',
     name: 'Cloud & Infrastructure',
     description:
-      'Serverless and containerised architectures, priced like someone is watching the bill — because I am.',
+      'Serverless and containerised architectures, priced like someone is watching the bill. Because I am.',
     items: ['AWS · 15+ services', 'ECS Fargate', 'Lambda', 'S3 · SQS · SNS', 'VPC · IAM', 'GCP'],
   },
   {
@@ -126,7 +124,7 @@ export const clusters: Cluster[] = [
     key: 'product',
     name: 'Product & Frontend',
     description:
-      'Enough product surface to own a feature end to end — including the part users actually see.',
+      'Enough product surface to own a feature end to end, including the part users actually see.',
     items: ['React', 'Next.js', 'Tailwind', 'HTML/CSS'],
   },
 ]
@@ -150,18 +148,18 @@ export const timeline: Station[] = [
   {
     company: 'Cefalo',
     role: 'Senior Software Engineer',
-    period: 'Apr 2022 — Present',
+    period: 'Apr 2022 – Present',
     location: 'Dhaka · remote with Norwegian teams',
     summary:
-      'Part of a 200+ engineer offshore organisation building for Norwegian industries — first owning a recruitment platform end to end, then moving into backend and data engineering for a major energy-market platform.',
+      'Part of a 200+ engineer offshore organisation building for Norwegian industries: first owning a recruitment platform end to end, then moving into backend and data engineering for a major energy-market platform.',
     engagements: [
       {
         name: 'Volue Insight',
         tag: 'Backend & data engineering · 2.5 yrs',
         points: [
-          'Run 20+ production Airflow DAGs orchestrating end-to-end pipelines across multiple data sources — scheduling, retries, and dependency management included.',
+          'Run 20+ production Airflow DAGs orchestrating end-to-end pipelines across multiple data sources, including scheduling, retries, and dependency management.',
           'Ingest, transform, and publish 500+ time-series curves consumed daily by internal teams and external customers of a $550M green-energy market data platform.',
-          'Automated the trunk-based CI pipeline — build, test, image publishing, deployment, release notes — and made the whole team faster.',
+          'Automated the trunk-based CI pipeline (build, test, image publishing, deployment, release notes) and made the whole team faster.',
           'Resolve broken pipelines surfaced by SLO alerts and customer reports, with root-cause analysis across team boundaries.',
         ],
       },
@@ -170,7 +168,7 @@ export const timeline: Station[] = [
         tag: 'Full-stack ownership · 1.5 yrs',
         points: [
           'Held 50% ownership of end-to-end design and development of a recruitment platform built on Django, JavaScript, and AWS.',
-          'Deployed services to ECS Fargate and ECR — auto-scaling with zero server management, no EC2 provisioning.',
+          'Deployed services to ECS Fargate and ECR: auto-scaling with zero server management, no EC2 provisioning.',
           'Designed a custom subscription system around a local mobile-payment provider, handling one-time and recurring billing through proprietary APIs and scheduled jobs.',
         ],
       },
@@ -179,17 +177,17 @@ export const timeline: Station[] = [
   {
     company: 'Brainstation 23',
     role: 'Software Engineer',
-    period: 'Jan 2019 — Mar 2022',
+    period: 'Jan 2019 – Mar 2022',
     location: 'Dhaka · global client teams',
     summary:
-      'Built cloud backends for global clients — a trivia platform for Robi, Bangladesh’s second-largest telco, and an ERP platform for Ferdia, a $2.33M-funded Norwegian transport startup.',
+      'Built cloud backends for global clients: a trivia platform for Robi, Bangladesh’s second-largest telco, and an ERP platform for Ferdia, a $2.33M-funded Norwegian transport startup.',
     engagements: [
       {
         name: 'Robi trivia platform',
         tag: 'High-traffic cloud backend',
         points: [
           'Kept a consumer backend healthy at 5M+ requests per day.',
-          'Cut the monthly cloud bill by 75% through API improvements, query optimisation, and caching — resolving the client’s budget concerns in weeks.',
+          'Cut the monthly cloud bill by 75% through API improvements, query optimisation, and caching, resolving the client’s budget concerns in weeks.',
           'Boosted average engagement 30% with scalable friendship and chat features on API Gateway, Lambda, and DynamoDB.',
         ],
       },
@@ -197,7 +195,7 @@ export const timeline: Station[] = [
         name: 'Ferdia',
         tag: 'Transport ERP · Norwegian startup',
         points: [
-          'Owned the organizational-unit management service powering RBAC, solving hierarchical CRUD with Modified Preorder Tree Traversal — query complexity down from O(N) to O(1).',
+          'Owned the organizational-unit management service powering RBAC, solving hierarchical CRUD with Modified Preorder Tree Traversal and taking query complexity from O(N) to O(1).',
           'Resolved critical security vulnerabilities by locking down exposed customer data in S3 buckets, while keeping access to existing data smooth for users.',
         ],
       },
@@ -209,7 +207,7 @@ export const timeline: Station[] = [
     period: 'Graduated Dec 2018',
     location: 'Dhaka, Bangladesh',
     summary:
-      'Where the systems habit started — competitive programming and years of teaching others to think in algorithms.',
+      'Where the systems habit started: competitive programming and years of teaching others to think in algorithms.',
     engagements: [
       {
         name: 'Foundations',
@@ -217,7 +215,7 @@ export const timeline: Station[] = [
         points: [
           'Mentored 100+ university students in algorithms and data structures over multiple years.',
           '29th place, ACM ICPC Dhaka Regional 2017 (150 teams); 3rd place, City Inter-University Programming Contest 2017 (40 teams).',
-          'Active competitive programmer — HackerRank 2237, CodeChef 2001, Codeforces 1554.',
+          'Active competitive programmer: HackerRank 2237, CodeChef 2001, Codeforces 1554.',
         ],
       },
     ],
@@ -247,7 +245,7 @@ export const systems: SystemCase[] = [
     context:
       'A $550M green-energy market data and forecasting platform, where traders and analysts depend on fresh curves every day.',
     built:
-      '20+ production Airflow DAGs moving data from raw sources to published output — Python ingest and transform jobs feeding 500+ time-series curves, with an automated trunk-based CI pipeline behind them.',
+      '20+ production Airflow DAGs moving data from raw sources to published output: Python ingest and transform jobs feeding 500+ time-series curves, with an automated trunk-based CI pipeline behind them.',
     impact:
       'Curves that internal teams and paying customers rely on daily, and broken pipelines caught by SLO alerts before customers feel them.',
     stack: ['Python', 'Airflow', 'Time-series', 'CI/CD', 'Docker'],
@@ -258,7 +256,7 @@ export const systems: SystemCase[] = [
     seed: 13,
     visual: 'cloud',
     context:
-      'A recruitment platform startup that needed one engineer to own half the product — design through deployment.',
+      'A recruitment platform startup that needed one engineer to own half the product, from design through deployment.',
     built:
       'Full-stack web application on Django, JavaScript, and AWS, deployed to ECS Fargate and ECR, plus a custom subscription engine integrating a local mobile-payment provider for one-time and recurring billing.',
     impact:
@@ -271,7 +269,7 @@ export const systems: SystemCase[] = [
     seed: 23,
     visual: 'traffic',
     context:
-      'A consumer trivia product for Bangladesh’s second-largest telco — five million requests a day, and a cloud bill the client could no longer justify.',
+      'A consumer trivia product for Bangladesh’s second-largest telco: five million requests a day, and a cloud bill the client could no longer justify.',
     built:
       'Backend hardening across APIs, database queries, and caching; then serverless friendship and chat features on API Gateway, Lambda, and DynamoDB.',
     impact:
@@ -297,11 +295,11 @@ export const systems: SystemCase[] = [
     seed: 41,
     visual: 'menu',
     context:
-      'A free SaaS platform for restaurant menu management — created, managed, and shared as digital menus via QR codes.',
+      'A free SaaS platform for restaurant menu management: created, managed, and shared as digital menus via QR codes.',
     built:
       'Next.js App Router product with NextAuth (Google OAuth + credentials, JWT sessions, MongoDB adapter), SWR data fetching with optimistic updates, and canvas-based QR generation.',
     impact:
-      'A working product used as a deliberate learning system for the modern React stack — auth, caching, and rendering tradeoffs learned on real workflows.',
+      'A working product used as a deliberate learning system for the modern React stack: auth, caching, and rendering tradeoffs learned on real workflows.',
     stack: ['Next.js', 'React', 'MongoDB', 'Tailwind', 'NextAuth'],
   },
   {
@@ -310,56 +308,16 @@ export const systems: SystemCase[] = [
     seed: 57,
     visual: 'stars',
     context:
-      'Learning Python in public — an educational repository of 100+ programming problems with detailed solutions.',
+      'Learning Python in public: an educational repository of 100+ programming problems with detailed solutions.',
     built:
       'A structured, beginner-friendly path through Python fundamentals and OOP, maintained as a living resource.',
     impact:
-      '3,100+ GitHub stars and 1,500+ forks — thousands of developers learned Python fundamentals from it.',
+      '3,100+ GitHub stars and 1,500+ forks, and thousands of developers learned Python fundamentals from it.',
     stack: ['Python', 'OOP', 'Open source'],
     link: {
       label: 'View on GitHub',
       href: 'https://github.com/darkprinx/break-the-ice-with-python',
     },
-  },
-]
-
-export interface Principle {
-  stage: string
-  name: string
-  body: string
-  proof: string
-}
-
-export const principles: Principle[] = [
-  {
-    stage: '01',
-    name: 'Understand',
-    body: 'Start from the business problem, not the ticket. The best architecture for the wrong problem is still the wrong system.',
-    proof: 'A client’s budget concern became a 75% smaller cloud bill.',
-  },
-  {
-    stage: '02',
-    name: 'Design',
-    body: 'Think in systems, not features. Data structures and boundaries chosen early decide what stays cheap to change later.',
-    proof: 'An O(N) hierarchy problem redesigned into O(1) with MPTT.',
-  },
-  {
-    stage: '03',
-    name: 'Build',
-    body: 'Boring, testable, shippable. Trunk-based development with an automated path from commit to release.',
-    proof: 'CI covering build, test, publish, deploy, and release notes.',
-  },
-  {
-    stage: '04',
-    name: 'Observe',
-    body: 'A backend you can’t see into is a backend you can’t trust. Instrument first, then let the alerts do the paging.',
-    proof: 'Pipelines fixed from SLO alerts before customers report them.',
-  },
-  {
-    stage: '05',
-    name: 'Improve',
-    body: 'Every incident, metric, and review feeds the next decision. Systems get better on purpose, not by accident.',
-    proof: 'Root-cause analysis across team boundaries, every time.',
   },
 ]
 
@@ -371,7 +329,7 @@ export interface Certification {
   credentialUrl?: string
 }
 
-/** Licenses & certifications — as listed on LinkedIn. */
+/** Licenses & certifications, as listed on LinkedIn. */
 export const certifications: Certification[] = [
   {
     name: 'AWS Certified Solutions Architect – Associate',
@@ -406,7 +364,7 @@ export interface Recommendation {
 }
 
 /**
- * LinkedIn recommendations received — names, titles, relationships, and text
+ * LinkedIn recommendations received: names, titles, relationships, and text
  * exactly as they appear on linkedin.com/in/rctushar07.
  */
 export const recommendations: Recommendation[] = [
@@ -499,12 +457,12 @@ export interface VolunteerEntry {
   description: string
 }
 
-/** Volunteering — as listed on LinkedIn. */
+/** Volunteering, as listed on LinkedIn. */
 export const volunteering: VolunteerEntry[] = [
   {
     organization: 'ACM Problem Solver Community',
     role: 'Lead Trainer',
-    period: 'Jun 2017 — Mar 2018',
+    period: 'Jun 2017 – Mar 2018',
     description:
       'Ran weekly competitive-programming sessions, building a problem-solving community across universities.',
   },
@@ -516,7 +474,7 @@ export const volunteering: VolunteerEntry[] = [
       'Organized and taught a competitive-programming camp for university students.',
   },
   {
-    organization: 'SWAP — Student Welfare Association',
+    organization: 'SWAP (Student Welfare Association)',
     role: 'Trainer',
     period: 'Aug 2017',
     description: 'Delivered introductory competitive-programming training.',
@@ -547,7 +505,7 @@ export interface Honor {
   date: string
 }
 
-/** Honors & awards — as listed on LinkedIn. */
+/** Honors & awards, as listed on LinkedIn. */
 export const honors: Honor[] = [
   {
     title: '28th in ACM ICPC Regional 2017',

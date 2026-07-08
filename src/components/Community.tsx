@@ -18,7 +18,7 @@ export function Community() {
       <SplitTitle id="community-title" text="Won the contests." accent="Then trained the next teams." />
       <Reveal>
         <p className="section-lede">
-          Years of competitive programming — placing in national contests, then
+          Years of competitive programming, placing in national contests, then
           volunteering as a trainer at six universities and communities.
         </p>
       </Reveal>

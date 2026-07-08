@@ -18,7 +18,7 @@ export function Hero({ reducedMotion }: Props) {
       <div className="hero-copy">
         <p className="eyebrow hero-eyebrow intro-a">
           <span className="eyebrow-dot" aria-hidden="true" />
-          {identity.name} — {identity.role}
+          {identity.name}, {identity.role}
         </p>
         <h1 className="hero-headline">
           <span className="hl-mask intro-b">

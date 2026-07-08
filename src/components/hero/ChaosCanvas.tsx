@@ -23,7 +23,7 @@ export function ChaosCanvas({ reducedMotion, words }: Props) {
       role="img"
       aria-label={`Hundreds of emerald fragments drift in chaos, then assemble themselves into the words ${words.join(
         ', ',
-      )} — order out of chaos, on repeat.`}
+      )}. Order out of chaos, on repeat.`}
     />
   )
 }
