@@ -3,4 +3,3 @@ dist
 context/
 *.local
 .DS_Store
-.github/
