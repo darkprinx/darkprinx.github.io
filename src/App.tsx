@@ -11,6 +11,7 @@ import { Community } from './components/Community.tsx'
 import { Contact } from './components/Contact.tsx'
 import { Footer } from './components/Footer.tsx'
 import { Cursor } from './components/Cursor.tsx'
+import { ShootZone } from './components/ShootZone.tsx'
 import { useReducedMotion } from './hooks/useReducedMotion.ts'
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
       </main>
       <Footer />
       <Cursor />
+      <ShootZone />
     </>
   )
 }

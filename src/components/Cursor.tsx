@@ -52,7 +52,9 @@ export function Cursor() {
         ring.style.opacity = '1'
       }
       const target = e.target as Element | null
-      hot = !!target?.closest('a, button, [data-cursor="hot"], canvas')
+      hot = !!target?.closest(
+        'a, button, [data-cursor="hot"], canvas, .cluster-tilt, .chip, .cred-card, .proof-card, .engagement, .honor-item, .volunteer-item, .case-glyph-box',
+      )
       ring.classList.toggle('is-hot', hot)
     }
     const onLeave = () => {
@@ -60,14 +62,24 @@ export function Cursor() {
       dot.style.opacity = '0'
       ring.style.opacity = '0'
     }
+    const onDown = () => {
+      ring.classList.remove('is-firing')
+      void ring.offsetWidth
+      ring.classList.add('is-firing')
+    }
+    const onFireEnd = () => ring.classList.remove('is-firing')
 
     window.addEventListener('pointermove', onMove, { passive: true })
+    window.addEventListener('pointerdown', onDown)
     document.documentElement.addEventListener('pointerleave', onLeave)
+    ring.addEventListener('animationend', onFireEnd)
     raf = requestAnimationFrame(loop)
     return () => {
       cancelAnimationFrame(raf)
       window.removeEventListener('pointermove', onMove)
+      window.removeEventListener('pointerdown', onDown)
       document.documentElement.removeEventListener('pointerleave', onLeave)
+      ring.removeEventListener('animationend', onFireEnd)
     }
   }, [enabled, reduced])
 
