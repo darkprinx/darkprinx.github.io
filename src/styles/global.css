@@ -425,8 +425,80 @@ ol[role='list'] {
   }
 }
 
+/* A jagged hole punched right into the shooting spot — a chunk knocked out
+   of the surface, not just a clean crack. Debris chips pop off with it. */
+.impact-mark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 997;
+  width: 58px;
+  height: 58px;
+  margin: -29px 0 0 -29px;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,20 58,26 64,18 72,28 66,38 78,42 70,52 80,60 66,64 70,76 56,70 50,82 44,68 30,74 36,60 22,58 34,48 24,40 38,36 32,24 46,28' fill='rgba(10,79,58,0.88)' stroke='rgba(230,247,244,0.5)' stroke-width='2.5'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: rotate(var(--rot, 0deg)) scale(0.5);
+  animation: impact-mark-fade 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes impact-mark-fade {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--rot, 0deg)) scale(0.3);
+  }
+  15% {
+    opacity: 1;
+    transform: rotate(var(--rot, 0deg)) scale(1.05);
+  }
+  25% {
+    transform: rotate(var(--rot, 0deg)) scale(1);
+  }
+  70% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--rot, 0deg)) scale(1);
+  }
+}
+
+/* Chunks that pop off the surface and tumble down with gravity. */
+.impact-debris {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  width: var(--s, 6px);
+  height: var(--s, 6px);
+  background: linear-gradient(135deg, var(--tint2), var(--em-mid));
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: impact-debris-fly 0.75s cubic-bezier(0.32, 0, 0.24, 1) forwards;
+}
+
+@keyframes impact-debris-fly {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  38% {
+    transform: translate(-50%, -50%) translate(var(--dx), var(--dy)) rotate(var(--rot));
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(var(--dx), calc(var(--dy) + var(--fall)))
+      rotate(calc(var(--rot) * 1.6));
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .impact-spark {
+  .impact-spark,
+  .impact-mark,
+  .impact-debris {
     display: none;
   }
 
