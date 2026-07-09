@@ -855,21 +855,6 @@ ol[role='list'] {
   align-items: start;
 }
 
-.about-statement {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: clamp(1.4rem, 1.6vw + 0.7rem, 2rem);
-  line-height: 1.4;
-  letter-spacing: -0.015em;
-  max-width: 21em;
-  color: var(--ink);
-}
-
-.about-statement em {
-  font-style: normal;
-  color: var(--em-deep);
-}
-
 .about-facets {
   display: grid;
   gap: 30px;

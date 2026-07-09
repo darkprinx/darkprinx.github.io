@@ -22,7 +22,7 @@ export const identity = {
     tail: 'come out.',
   },
   positioning:
-    'Backend-heavy full-stack engineer with seven-plus years across cloud SaaS platforms, data pipelines, and high-traffic backends, built remotely with European product teams.',
+    'Backend-heavy full-stack engineer with 7+ years across cloud SaaS platforms, data pipelines, and high-traffic backends, built remotely with global product teams.',
   heroHint: 'Move through the swarm. Click to break it. It always rebuilds.',
   resumeUrl: '/resume.pdf',
   calendlyUrl: 'https://calendly.com/rctushar/lets-talk',
@@ -49,15 +49,10 @@ export const stats = [
 ]
 
 export const about = {
-  statement: {
-    before: 'Seven years with',
-    emphasis: 'global engineering teams across Europe,',
-    after: 'shipping the distributed systems, pipelines, payment flows, and infrastructure that keep their products running',
-  },
   facets: [
     {
       title: 'Backend-heavy, full-stack honest',
-      body: 'Backend is home (Python, Django, FastAPI), but I own the full delivery loop: data pipelines, AWS/GCP infrastructure, and CI/CD, increasingly with AI-driven tools like Claude Code and Copilot built into how I ship.',
+      body: 'Backend is home (Python, Django), but I own the full delivery loop: polished React/Next.js interfaces, data pipelines, AWS/GCP infrastructure, and CI/CD, increasingly with AI-driven tools like Claude Code and Copilot built into how I ship.',
     },
     {
       title: 'Remote by design',

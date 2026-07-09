@@ -16,12 +16,6 @@ export function About() {
 
       <div className="about-grid">
         <div className="about-main">
-          <Reveal>
-            <p className="about-statement">
-              {about.statement.before} <em>{about.statement.emphasis}</em>{' '}
-              {about.statement.after}
-            </p>
-          </Reveal>
           <div className="about-facets">
             {about.facets.map((facet, i) => (
               <Reveal key={facet.title} delay={i * 90} className="facet">
