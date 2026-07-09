@@ -1,4 +1,4 @@
-import { about, identity, portrait } from '../data/profile.ts'
+import { about, portrait } from '../data/profile.ts'
 import { Reveal } from './Reveal.tsx'
 import { SplitTitle } from './SplitTitle.tsx'
 import { PortraitMosaic } from './PortraitMosaic.tsx'
@@ -35,19 +35,6 @@ export function About() {
         <div className="about-side">
           <Reveal delay={100}>
             <PortraitMosaic src={portrait.src} fallback={portrait.fallback} alt={portrait.alt} />
-          </Reveal>
-          <Reveal className="about-spec" delay={180}>
-            <div className="spec-card">
-              <p className="spec-head">{identity.name}</p>
-              <dl>
-                {about.spec.map((row) => (
-                  <div className="spec-row" key={row.label}>
-                    <dt>{row.label}</dt>
-                    <dd>{row.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
           </Reveal>
         </div>
       </div>

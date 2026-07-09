@@ -125,7 +125,7 @@ ol[role='list'] {
 .section {
   max-width: var(--page-max);
   margin-inline: auto;
-  padding: clamp(88px, 11vw, 150px) var(--page-pad) 0;
+  padding: clamp(56px, 7vw, 100px) var(--page-pad) 0;
 }
 
 .section-dark {
@@ -133,8 +133,8 @@ ol[role='list'] {
     radial-gradient(1100px 520px at 82% -10%, rgba(0, 174, 141, 0.14), transparent 60%),
     var(--forest);
   color: var(--cream);
-  margin-top: clamp(88px, 11vw, 150px);
-  padding: clamp(80px, 9vw, 130px) 0;
+  margin-top: clamp(56px, 7vw, 100px);
+  padding: clamp(52px, 6vw, 90px) 0;
 }
 
 .section-dark-inner,
@@ -146,8 +146,8 @@ ol[role='list'] {
 
 .section-tint {
   background: linear-gradient(180deg, var(--tint), rgba(230, 247, 244, 0.4));
-  margin-top: clamp(88px, 11vw, 150px);
-  padding: clamp(80px, 9vw, 130px) 0;
+  margin-top: clamp(56px, 7vw, 100px);
+  padding: clamp(52px, 6vw, 90px) 0;
 }
 
 .eyebrow {
@@ -849,16 +849,16 @@ ol[role='list'] {
    ============================================================== */
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(300px, 1fr);
-  gap: clamp(36px, 5vw, 84px);
-  margin-top: clamp(40px, 6vw, 72px);
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, max-content);
+  gap: clamp(24px, 4vw, 56px);
+  margin-top: clamp(28px, 4vw, 28px);
+  align-items: stretch;
 }
 
 .about-facets {
   display: grid;
   gap: 30px;
-  margin-top: 48px;
+  margin-top: 40px;
 }
 
 .facet {
@@ -906,14 +906,17 @@ ol[role='list'] {
 }
 
 .about-side {
-  display: grid;
-  gap: 26px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Mosaic portrait */
 .portrait {
   position: relative;
   aspect-ratio: 4 / 5;
+  height: 100%;
+  width: auto;
+  margin-inline: auto 0;
 }
 
 .portrait-canvas {
@@ -947,58 +950,18 @@ ol[role='list'] {
   transform: rotate(24deg);
 }
 
-/* Spec card — a forest object on the cream page */
-.spec-card {
-  background:
-    radial-gradient(360px 220px at 90% -10%, rgba(0, 174, 141, 0.25), transparent 65%),
-    var(--forest);
-  color: var(--cream);
-  border-radius: 22px;
-  padding: 30px 28px;
-  box-shadow: var(--shadow);
-}
-
-.spec-head {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.16rem;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--cream-a12);
-}
-
-.spec-row {
-  display: grid;
-  grid-template-columns: 104px 1fr;
-  gap: 14px;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(241, 239, 232, 0.09);
-}
-
-.spec-row:last-child {
-  border-bottom: none;
-}
-
-.spec-row dt {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.68rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--emerald);
-  padding-top: 4px;
-}
-
-.spec-row dd {
-  font-size: 0.94rem;
-  color: rgba(241, 239, 232, 0.92);
-}
-
 @media (max-width: 899px) {
   .about-grid {
     grid-template-columns: 1fr;
   }
 
+  .about-side {
+    justify-content: center;
+  }
+
   .portrait {
+    height: auto;
+    width: 100%;
     max-width: 420px;
     margin-inline: auto;
   }
@@ -1744,7 +1707,7 @@ ol[role='list'] {
 
 /* The contact section flows straight into the footer */
 .section-dark.contact {
-  padding-bottom: clamp(90px, 10vw, 150px);
+  padding-bottom: clamp(60px, 7vw, 100px);
   margin-bottom: 0;
 }
 

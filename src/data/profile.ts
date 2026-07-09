@@ -55,23 +55,12 @@ export const about = {
       body: 'Backend is home (Python, Django), but I own the full delivery loop: polished React/Next.js interfaces, data pipelines, AWS/GCP infrastructure, and CI/CD, increasingly with AI-driven tools like Claude Code and Copilot built into how I ship.',
     },
     {
-      title: 'Remote by design',
-      body: 'Years remote with Norwegian and European teams: inside a 200+ engineer delivery org, on a $550M energy-market platform, and behind a telco backend serving 5M+ requests a day.',
-    },
-    {
-      title: 'Ownership over tickets',
-      body: 'Cut a client’s monthly cloud bill by 75%. Closed a customer-data vulnerability in object storage. Rebuilt an org-hierarchy service from O(N) to O(1) reads. Mentored 20+ engineers on AWS along the way.',
+      title: 'Leadership through mentorship',
+      body: 'Certified Scrum Master who runs sprint planning and standups as naturally as I write code. Mentored 20+ engineers on AWS and 100+ university students in algorithms, because growing the people around me compounds faster than any single ticket.',
     },
   ],
   philosophy:
     'Make it work, make it observable, make it cheap to change. In that order.',
-  spec: [
-    { label: 'Base', value: 'Dhaka, Bangladesh · UTC+6' },
-    { label: 'Experience', value: '7+ years' },
-    { label: 'Current', value: 'Senior Software Engineer, Cefalo' },
-    { label: 'Focus', value: 'Backend · Cloud SaaS · Data engineering' },
-    { label: 'Education', value: 'BSc CSE, East West University' },
-  ],
 }
 
 export interface ProofQuote {
