@@ -256,68 +256,6 @@ function TreeViz() {
   )
 }
 
-/* ---------- 5. App / QR frame — MenuDao ---------- */
-function MenuViz() {
-  const qrPattern = [
-    [1,1,0,1,0,1,1],
-    [1,0,0,0,0,0,1],
-    [0,0,1,0,1,0,0],
-    [1,0,0,1,0,0,1],
-    [0,0,1,0,0,0,0],
-    [1,0,0,0,1,0,1],
-    [1,1,0,0,0,1,1],
-  ]
-  const cellSize = 8, startX = 55, startY = 52
-
-  return (
-    <g>
-      {/* Phone frame */}
-      <rect x="52" y="8" width="76" height="126" rx="12"
-        fill="var(--cream)" stroke="var(--ink)" strokeWidth="1.5" strokeOpacity="0.2" />
-      {/* Notch */}
-      <rect x="78" y="12" width="24" height="4" rx="2"
-        fill="var(--line)" opacity="0.5" />
-
-      {/* App header bar */}
-      <rect x="52" y="18" width="76" height="24" rx="0"
-        fill="var(--forest)" opacity="0.9" />
-      <text x="90" y="33" fill="var(--cream)" fontSize="7.5" textAnchor="middle"
-        fontFamily="var(--font-display)" fontWeight="700">MenuDao</text>
-
-      {/* QR code grid */}
-      {qrPattern.map((row, r) =>
-        row.map((cell, c) =>
-          cell ? (
-            <rect key={`${r}-${c}`}
-              x={startX + c * cellSize} y={startY + r * cellSize}
-              width={cellSize - 1.5} height={cellSize - 1.5}
-              rx="1.5"
-              fill={r < 3 && c < 3 ? 'var(--em-deep)' : r < 3 && c > 3 ? 'var(--em-deep)' : r > 3 && c < 3 ? 'var(--em-deep)' : 'var(--ink)'}
-              opacity={r < 3 && c < 3 ? 1 : r < 3 && c > 3 ? 1 : r > 3 && c < 3 ? 1 : 0.55}
-            />
-          ) : null
-        )
-      )}
-
-      {/* Scan line */}
-      <line x1="56" y1="88" x2="124" y2="88"
-        stroke="var(--emerald)" strokeWidth="1" strokeOpacity="0.5" strokeDasharray="2 2" />
-
-      {/* Menu item rows */}
-      <rect x="60" y="110" width="60" height="6" rx="2" fill="var(--line)" />
-      <rect x="60" y="120" width="44" height="5" rx="2" fill="var(--line)" opacity="0.5" />
-
-      {/* Corner finder patterns (emerald accent) */}
-      <rect x="55" y="52" width="20" height="20" rx="3"
-        fill="none" stroke="var(--emerald)" strokeWidth="1.5" />
-      <rect x="105" y="52" width="20" height="20" rx="3"
-        fill="none" stroke="var(--emerald)" strokeWidth="1.5" />
-      <rect x="55" y="100" width="20" height="20" rx="3"
-        fill="none" stroke="var(--emerald)" strokeWidth="1.5" />
-    </g>
-  )
-}
-
 /* ---------- 6. Contribution grid / star field — Python OSS ---------- */
 function StarsViz() {
   const intensities = [
@@ -375,6 +313,81 @@ function StarsViz() {
   )
 }
 
+/* ---------- 7. RAG pipeline / cited chat — Marginalia ---------- */
+function RagViz() {
+  return (
+    <g>
+      {/* Document (PDF/TXT/MD) */}
+      <rect x="8" y="34" width="34" height="46" rx="4"
+        fill="var(--cream)" stroke="var(--line)" strokeWidth="1.5" />
+      <polygon points="34,34 42,34 34,42" fill="var(--line)" opacity="0.7" />
+      {[44, 52, 60, 68].map((y) => (
+        <rect key={y} x="14" y={y} width={y === 68 ? 14 : 22} height="3" rx="1.5"
+          fill="var(--ink)" opacity="0.18" />
+      ))}
+      <text x="25" y="94" fill="var(--ink-soft)" fontSize="6" textAnchor="middle"
+        fontFamily="var(--font-display)" fontWeight="600">PDF·TXT·MD</text>
+
+      {/* Arrow: doc -> chunks */}
+      <line x1="46" y1="52" x2="58" y2="52" stroke="var(--line)" strokeWidth="1" />
+      <polygon points="56,49 60,52 56,55" fill="var(--line)" />
+
+      {/* Overlapping chunk stack */}
+      {[0, 1, 2].map((i) => (
+        <rect key={i} x={62 + i * 4} y={38 + i * 8} width="26" height="16" rx="3"
+          fill="var(--tint)" stroke="var(--emerald)" strokeWidth="1"
+          opacity={0.55 + i * 0.2} />
+      ))}
+      <text x="75" y="94" fill="var(--ink-soft)" fontSize="6" textAnchor="middle"
+        fontFamily="var(--font-display)" fontWeight="600">1,400-char chunks</text>
+
+      {/* Arrow: chunks -> vectors */}
+      <line x1="94" y1="52" x2="106" y2="52" stroke="var(--line)" strokeWidth="1" />
+      <polygon points="104,49 108,52 104,55" fill="var(--line)" />
+
+      {/* Embedding vector cloud, top hit highlighted */}
+      {[[112, 40], [122, 46], [116, 56], [128, 58], [110, 64], [124, 34], [120, 66]].map(
+        ([x, y], i) => (
+          <circle key={`${x}-${y}`} cx={x} cy={y} r={i === 3 ? 4 : 2.6}
+            fill={i === 3 ? 'var(--emerald)' : 'var(--em-mid)'}
+            opacity={i === 3 ? 1 : 0.4} />
+        ),
+      )}
+      <circle cx="128" cy="58" r="7" fill="none" stroke="var(--emerald)" strokeWidth="1.2" opacity="0.5" />
+      <text x="120" y="94" fill="var(--ink-soft)" fontSize="6" textAnchor="middle"
+        fontFamily="var(--font-display)" fontWeight="600">cosine rank</text>
+
+      {/* Arrow: vectors -> answer */}
+      <line x1="132" y1="54" x2="144" y2="54" stroke="var(--emerald)" strokeWidth="1.3" />
+      <polygon points="142,51 147,54 142,57" fill="var(--emerald)" />
+
+      {/* Cited chat bubble */}
+      <rect x="146" y="30" width="30" height="34" rx="6"
+        fill="var(--forest)" opacity="0.95" />
+      <rect x="151" y="37" width="20" height="3" rx="1.5" fill="var(--cream)" opacity="0.85" />
+      <rect x="151" y="44" width="20" height="3" rx="1.5" fill="var(--cream)" opacity="0.85" />
+      <rect x="151" y="51" width="13" height="3" rx="1.5" fill="var(--cream)" opacity="0.85" />
+      {[[168.5, 39.5], [168.5, 46.5]].map(([x, y], i) => (
+        <g key={`${x}-${y}`}>
+          <circle cx={x} cy={y} r="3" fill="var(--emerald)" />
+          <text x={x} y={y + 2} fill="var(--forest)" fontSize="4.5" textAnchor="middle"
+            fontFamily="var(--font-display)" fontWeight="700">{i + 1}</text>
+        </g>
+      ))}
+
+      {/* Margin panel echoing the cited source */}
+      <rect x="150" y="98" width="26" height="24" rx="3"
+        fill="var(--tint)" stroke="var(--emerald)" strokeWidth="1" />
+      <rect x="153" y="103" width="18" height="2.4" rx="1.2" fill="var(--em-deep)" opacity="0.7" />
+      <rect x="153" y="108" width="20" height="2.4" rx="1.2" fill="var(--em-deep)" opacity="0.5" />
+      <rect x="153" y="113" width="14" height="2.4" rx="1.2" fill="var(--em-deep)" opacity="0.5" />
+      <line x1="163" y1="64" x2="163" y2="96" stroke="var(--emerald)" strokeWidth="1" strokeDasharray="2 2" opacity="0.6" />
+      <text x="163" y="132" fill="var(--em-deep)" fontSize="6" textAnchor="middle"
+        fontFamily="var(--font-display)" fontWeight="700">margin cite</text>
+    </g>
+  )
+}
+
 /* ---------- Main export ---------- */
 
 export function CaseVisual({ type }: { type: CaseVisualType }) {
@@ -384,8 +397,8 @@ export function CaseVisual({ type }: { type: CaseVisualType }) {
       {type === 'cloud' && <CloudViz />}
       {type === 'traffic' && <TrafficViz />}
       {type === 'tree' && <TreeViz />}
-      {type === 'menu' && <MenuViz />}
       {type === 'stars' && <StarsViz />}
+      {type === 'rag' && <RagViz />}
     </svg>
   )
 }

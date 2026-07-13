@@ -234,7 +234,7 @@ export const timeline: Station[] = [
   },
 ]
 
-export type CaseVisualType = 'timeseries' | 'cloud' | 'traffic' | 'tree' | 'menu' | 'stars'
+export type CaseVisualType = 'timeseries' | 'cloud' | 'traffic' | 'tree' | 'stars' | 'rag'
 
 export interface SystemCase {
   title: string
@@ -302,17 +302,21 @@ export const systems: SystemCase[] = [
     stack: ['Python', 'MPTT', 'RBAC', 'SQL'],
   },
   {
-    title: 'MenuDao',
+    title: 'Marginalia — cited RAG document Q&A',
     client: 'Independent R&D',
-    seed: 41,
-    visual: 'menu',
+    seed: 47,
+    visual: 'rag',
     context:
-      'A free SaaS platform for restaurant menu management: created, managed, and shared as digital menus via QR codes.',
+      'A personal research tool: upload PDFs, text, or Markdown, ask questions against them, and get answers that trace back to the exact source passage instead of opaque LLM output.',
     built:
-      'Next.js App Router product with NextAuth (Google OAuth + credentials, JWT sessions, MongoDB adapter), SWR data fetching with optimistic updates, and canvas-based QR generation.',
+      'Next.js 16 and React 19 app on a two-stage RAG pipeline: documents are chunked into overlapping passages, embedded with Gemini Embedding 001, and stored in Prisma over SQLite; queries are ranked by cosine similarity and answered by Gemini 2.5 Flash through Anthropic’s Claude Agent SDK, streaming cited responses as NDJSON.',
     impact:
-      'A working product used as a deliberate learning system for the modern React stack: auth, caching, and rendering tradeoffs learned on real workflows.',
-    stack: ['Next.js', 'React', 'MongoDB', 'Tailwind', 'NextAuth'],
+      'Every answer ships its sources before the response even finishes streaming: click a citation mark and the cited passage surfaces in a margin panel, turning a chatbox into an auditable research tool.',
+    stack: ['Next.js', 'TypeScript', 'Prisma', 'SQLite', 'Gemini', 'RAG'],
+    link: {
+      label: 'View live app',
+      href: 'https://margenilia.vercel.app/',
+    },
   },
   {
     title: 'Break The Ice With Python',
