@@ -109,7 +109,7 @@ export const clusters: Cluster[] = [
     name: 'Data Engineering & Pipelines',
     description:
       'Orchestrated DAGs, ingest–transform–publish flows, and pipelines that page me before they page customers.',
-    items: ['Airflow', 'Kafka', 'Pandas', 'Time-series curves', 'SLO-driven ops'],
+    items: ['ETL', 'Airflow', 'Kafka', 'Pandas', 'Time-series curves'],
   },
   {
     key: 'cloud',
@@ -117,6 +117,21 @@ export const clusters: Cluster[] = [
     description:
       'Serverless and containerised architectures, priced like someone is watching the bill. Because I am.',
     items: ['AWS · 15+ services', 'ECS Fargate', 'Lambda', 'S3 · SQS · SNS', 'VPC · IAM', 'GCP'],
+  },
+    {
+    key: 'ai',
+    name: 'AI-Augmented Engineering',
+    description:
+      'AI woven into the delivery loop itself, from how I write code to what I build with it.',
+    items: [
+      'Claude Code',
+      'GitHub Copilot',
+      'RAG pipelines',
+      'LLM API Integration',
+      'Embeddings',
+      'Vector DB',
+      'Tooling'
+    ],
   },
   {
     key: 'databases',

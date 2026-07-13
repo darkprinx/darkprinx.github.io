@@ -61,7 +61,7 @@ export function Capabilities() {
         <p className="section-lede">
           Pull one thread and the rest moves. A new feature needs an API. The
           API needs a database. The database needs someone awake when it falls
-          over at 2 a.m. Six clusters, one nervous system.
+          over at 2 a.m. Seven clusters, one nervous system.
         </p>
       </Reveal>
 
